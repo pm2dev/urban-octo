@@ -1,0 +1,26 @@
+nav {
+    background-color: #555b6e; /* Dark background color */
+    color: white; /* White text color */
+    padding: 10px 0; /* Add some top and bottom padding */
+  }
+  
+  nav ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding of the ul */
+    margin: 0; /* Remove default margin of the ul */
+    text-align: right; /* Center the links horizontally */
+  }
+  
+  nav ul li {
+    display: inline; /* Make list items appear on the same line */
+    margin: 0 15px; /* Add spacing between links */
+  }
+  
+  nav ul li a {
+    color: white; /* Link text color */
+    text-decoration: none; /* Remove underlines from links */
+  }
+  
+  nav ul li a:hover {
+    color: #f0f0f0; /* Slightly lighter color on hover */
+  }
