@@ -3,18 +3,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelector('.nav-links');
     const body = document.body;
 
-    // Toggle menu function
     function toggleMenu() {
         hamburger.classList.toggle('active');
         navLinks.classList.toggle('active');
-        body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+        body.classList.toggle('menu-open');
     }
 
-    // Toggle menu on hamburger click
-    hamburger.addEventListener('click', (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        toggleMenu();
+    hamburger.addEventListener('click', toggleMenu);
+
+    // Close menu when clicking a link
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', toggleMenu);
     });
 
     // Close menu when clicking outside
@@ -26,15 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Close menu when clicking a link
-    navLinks.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', (e) => {
-            if (navLinks.classList.contains('active')) {
-                toggleMenu();
-            }
-        });
-    });
-
     // Handle touch events for iOS
     document.addEventListener('touchstart', (e) => {
         if (navLinks.classList.contains('active') && 
@@ -43,4 +33,11 @@ document.addEventListener('DOMContentLoaded', () => {
             toggleMenu();
         }
     }, { passive: true });
+
+    // Prevent touch events from propagating when menu is open
+    navLinks.addEventListener('touchmove', (e) => {
+        if (navLinks.classList.contains('active')) {
+            e.preventDefault();
+        }
+    }, { passive: false });
 }); 
