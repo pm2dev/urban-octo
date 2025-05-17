@@ -30,6 +30,11 @@ nav {
     margin: 0 auto;
 }
 
+/* Add padding to main content to account for fixed header */
+main {
+    padding-top: 80px; /* Adjust this value based on your header height */
+}
+
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
@@ -642,4 +647,270 @@ footer {
 .contact-card p {
     color: #666;
     line-height: 1.6;
+}
+
+/* Tool Review Page Styles */
+.review-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.tool-overview {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+}
+
+.tool-header {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.tool-logo {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+}
+
+.tool-info h2 {
+    font-size: 2.5rem;
+    margin: 0;
+    color: #333;
+}
+
+.tool-meta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.tool-category {
+    background: #f0f0f0;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.tool-rating {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.tool-rating .stars {
+    color: #ffd700;
+}
+
+.tool-summary {
+    margin: 2rem 0;
+}
+
+.tool-summary p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #444;
+}
+
+.key-features {
+    margin: 2rem 0;
+}
+
+.key-features ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.key-features li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem;
+    background: #f8f9fa;
+    border-radius: 4px;
+}
+
+.key-features i {
+    color: #28a745;
+}
+
+.pros-cons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.pros, .cons {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.pros h3, .cons h3 {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.pros ul, .cons ul {
+    list-style: none;
+    padding: 0;
+}
+
+.pros li, .cons li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.pros li:before {
+    content: "✓";
+    color: #28a745;
+    position: absolute;
+    left: 0;
+}
+
+.cons li:before {
+    content: "×";
+    color: #dc3545;
+    position: absolute;
+    left: 0;
+}
+
+.pricing {
+    margin: 2rem 0;
+}
+
+.pricing-tiers {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.pricing-tier {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.pricing-tier h4 {
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.pricing-tier .price {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #007bff;
+    margin: 1rem 0;
+}
+
+.pricing-tier ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.pricing-tier li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.pricing-tier li:before {
+    content: "•";
+    color: #007bff;
+    position: absolute;
+    left: 0;
+}
+
+.use-cases {
+    margin: 2rem 0;
+}
+
+.use-case-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.use-case {
+    text-align: center;
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.use-case i {
+    font-size: 2rem;
+    color: #007bff;
+    margin-bottom: 1rem;
+}
+
+.use-case h4 {
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.alternatives {
+    margin: 2rem 0;
+}
+
+.alternatives ul {
+    list-style: none;
+    padding: 0;
+}
+
+.alternatives li {
+    margin-bottom: 0.5rem;
+}
+
+.alternatives a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.alternatives a:hover {
+    text-decoration: underline;
+}
+
+.conclusion {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.conclusion p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #444;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .tool-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .tool-meta {
+        justify-content: center;
+    }
+
+    .pricing-tiers {
+        grid-template-columns: 1fr;
+    }
 } 
