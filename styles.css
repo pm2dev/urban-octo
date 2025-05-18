@@ -1099,4 +1099,65 @@ footer {
     .benefit-card {
         padding: 1.5rem;
     }
+}
+
+.tool-title-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.tool-title-row h2 {
+    margin: 0;
+}
+
+.tool-title-row .cta-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+}
+
+.setup-tips {
+    margin: 2rem 0;
+}
+
+.setup-tips h3 {
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.tip-card {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.tip-card:hover {
+    transform: translateY(-5px);
+}
+
+.tip-card i {
+    font-size: 2rem;
+    color: #3498db;
+    margin-bottom: 1rem;
+}
+
+.tip-card h4 {
+    color: #2c3e50;
+    margin-bottom: 0.75rem;
+    font-size: 1.2rem;
+}
+
+.tip-card p {
+    color: #666;
+    line-height: 1.6;
+    font-size: 0.95rem;
 } 
