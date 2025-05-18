@@ -92,7 +92,7 @@ main {
     .nav-links {
         position: fixed;
         top: 0;
-        left: 0;
+        left: -100%;
         width: 100%;
         height: 100vh;
         background-color: white;
@@ -100,16 +100,13 @@ main {
         align-items: center;
         justify-content: center;
         gap: 2rem;
-        visibility: hidden;
-        opacity: 0;
-        transition: opacity 0.3s ease, visibility 0.3s ease;
-        z-index: 1000;
+        transition: left 0.3s ease;
+        z-index: 999;
         padding: 2rem;
     }
 
     .nav-links.active {
-        visibility: visible;
-        opacity: 1;
+        left: 0;
     }
 
     .nav-links li {
@@ -149,6 +146,34 @@ main {
     /* Prevent body scroll when menu is open */
     body.menu-open {
         overflow: hidden;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero p {
+        font-size: 1.2rem;
+    }
+    
+    .about-content,
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+
+    .review-content .cta-button {
+        display: block;
+        width: 100%;
+        text-align: center;
     }
 }
 
@@ -545,35 +570,6 @@ footer {
     }
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-    }
-    
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-    
-    .hero p {
-        font-size: 1.2rem;
-    }
-    
-    .about-content,
-    .services-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .footer-content {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-    
-    .social-links {
-        justify-content: center;
-    }
-}
-
 /* Reviews Section */
 .reviews-grid {
     max-width: 1200px;
@@ -628,6 +624,12 @@ footer {
 .review-content p {
     color: #666;
     line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.review-content .cta-button {
+    display: inline-block;
+    margin-top: 0.5rem;
 }
 
 /* Contact Information Section */
@@ -942,5 +944,159 @@ footer {
 
     .pricing-tiers {
         grid-template-columns: 1fr;
+    }
+}
+
+.reviews h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #2c3e50;
+}
+
+/* Training Programs Section */
+.training-programs {
+    padding: 5rem 1rem;
+    background-color: #f9f9f9;
+}
+
+.training-programs h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #2c3e50;
+}
+
+.training-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.training-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.training-card:hover {
+    transform: translateY(-5px);
+}
+
+.training-card i {
+    font-size: 3rem;
+    color: #3498db;
+    margin-bottom: 1.5rem;
+}
+
+.training-card h3 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.training-card p {
+    color: #666;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.training-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem 0;
+    text-align: left;
+}
+
+.training-features li {
+    padding: 0.5rem 0;
+    color: #666;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.training-features li:before {
+    content: "✓";
+    color: #3498db;
+    position: absolute;
+    left: 0;
+}
+
+/* Training Benefits Section */
+.training-benefits {
+    padding: 5rem 1rem;
+    background-color: white;
+}
+
+.training-benefits h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #2c3e50;
+}
+
+.benefits-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.benefit-card {
+    text-align: center;
+    padding: 2rem;
+}
+
+.benefit-card i {
+    font-size: 2.5rem;
+    color: #3498db;
+    margin-bottom: 1rem;
+}
+
+.benefit-card h3 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.benefit-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Contact Form Select */
+.contact-form select {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 100%;
+    margin-bottom: 1rem;
+    background-color: white;
+}
+
+/* Responsive Design for Training Page */
+@media (max-width: 768px) {
+    .training-grid,
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .training-card {
+        padding: 1.5rem;
+    }
+
+    .training-features {
+        margin-bottom: 1.5rem;
+    }
+
+    .benefit-card {
+        padding: 1.5rem;
     }
 } 
