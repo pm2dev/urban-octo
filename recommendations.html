@@ -1,23 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta tags for character encoding and responsive viewport -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Software Recommendations - AskThePM</title>
+    <!-- External CSS files -->
     <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Contact form JavaScript -->
     <script src="contact-form.js" defer></script>
+    <!-- Navigation JavaScript -->
     <script src="nav.js" defer></script>
 </head>
 <body>
+    <!-- Fixed header with navigation -->
     <header>
         <nav>
+            <!-- Company logo -->
             <div class="logo">AskThePM</div>
+            <!-- Hamburger menu button for mobile navigation -->
             <button class="hamburger" aria-label="Toggle Menu">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
+            <!-- Main navigation menu -->
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="why-us.html">Why Us</a></li>
@@ -29,16 +38,11 @@
     </header>
 
     <main>
-        <!-- <section class="hero">
-            <div class="hero-content">
-                <h1>Tool Recommendations</h1>
-                <p>Expert reviews of the best project management tools</p>
-            </div>
-        </section> -->
-
+        <!-- Reviews section showcasing featured tools -->
         <section class="reviews">
             <h2>Featured Tools</h2>
             <div class="reviews-grid">
+                <!-- Todoist review card -->
                 <div class="review-card">
                     <div class="review-header">
                         <img src="assets/images/todoist-logo.png" alt="Todoist Logo" class="review-avatar">
@@ -60,6 +64,7 @@
                     </div>
                 </div>
 
+                <!-- Asana review card -->
                 <div class="review-card">
                     <div class="review-header">
                         <img src="assets/images/asana-logo.png" alt="Asana Logo" class="review-avatar">
@@ -81,6 +86,7 @@
                     </div>
                 </div>
 
+                <!-- Notion review card -->
                 <div class="review-card">
                     <div class="review-header">
                         <img src="assets/images/notion-logo.png" alt="Notion Logo" class="review-avatar">
@@ -102,6 +108,7 @@
                     </div>
                 </div>
 
+                <!-- ClickUp review card -->
                 <div class="review-card">
                     <div class="review-header">
                         <img src="assets/images/clickup-logo.png" alt="ClickUp Logo" class="review-avatar">
@@ -125,9 +132,11 @@
             </div>
         </section>
 
+        <!-- Contact section with form -->
         <section id="contact" class="contact">
             <h2>Contact Us</h2>
             <div class="contact-container">
+                <!-- Contact form with validation -->
                 <form id="contactForm" class="contact-form">
                     <input type="text" name="name" placeholder="Your Name" required>
                     <input type="email" name="email" placeholder="Your Email" required>
@@ -138,12 +147,15 @@
         </section>
     </main>
 
+    <!-- Footer section -->
     <footer>
         <div class="footer-content">
+            <!-- Company information -->
             <div class="footer-section">
                 <h3>AskThePM</h3>
                 <p>Your project, our expertise.</p>
             </div>
+            <!-- Quick navigation links -->
             <div class="footer-section">
                 <h3>Quick Links</h3>
                 <ul>
@@ -153,6 +165,7 @@
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
+            <!-- Social media links -->
             <div class="footer-section">
                 <h3>Connect With Us</h3>
                 <div class="social-links">
@@ -162,6 +175,7 @@
                 </div>
             </div>
         </div>
+        <!-- Copyright information -->
         <div class="footer-bottom">
             <p>&copy; 2025 AskThePM. All rights reserved.</p>
         </div>

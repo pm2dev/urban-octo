@@ -1,23 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta tags for character encoding and responsive viewport -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Why Choose Us - AskThePM</title>
+    <!-- External CSS files -->
     <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Contact form JavaScript -->
     <script src="contact-form.js" defer></script>
+    <!-- Navigation JavaScript -->
     <script src="nav.js" defer></script>
 </head>
 <body>
+    <!-- Fixed header with navigation -->
     <header>
         <nav>
-            <div class="logo">AskThePM</div>
+            <!-- Company logo -->
+            <div class="logo"><img src="assets/images/logo.png"/>AskThePM</div>
+            <!-- Hamburger menu button for mobile navigation -->
             <button class="hamburger" aria-label="Toggle Menu">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
+            <!-- Main navigation menu -->
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="why-us.html" class="active">Why Us</a></li>
@@ -29,10 +38,17 @@
     </header>
 
     <main>
+        <!-- Hero section with main value proposition -->
         <section class="hero">
             <div class="hero-content">
-                <h1>Why Choose AskThePM?</h1>
-                <p>Expert project management solutions tailored to your needs</p>
+                <div class="hero-text">
+                    <h1>Why Choose <i>AskThePM</i> ?</h1>
+                    <!-- <p>Expert project management solutions tailored to your needs</p> -->
+                </div>
+                <!-- <div class="hero-buttons">
+                    <button class="cta-button">Let Us Help</button>
+                    <button class="cta-button">See Our Work</button>
+                </div> -->
             </div>
         </section>
 
@@ -40,13 +56,13 @@
             <h2>Our Expertise</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>With over 15 years of experience in online project management, we specialize in helping remote teams succeed. Our certified PMP professionals have successfully delivered projects across various industries, all through virtual collaboration and digital tools.</p>
+                    <p>With over 15 years of experience in project management, we are experts in our craft. We specialize in helping  teams succeed. Our certified professionals have successfully delivered projects across various industries, all through virtual collaboration and digital tools.</p>
                 </div>
                 <div class="about-stats">
                     <div class="stat">
                         <i class="fas fa-globe"></i>
-                        <h3>15+</h3>
-                        <p>Years Remote Experience</p>
+                        <h3>15</h3>
+                        <p>Years of Experience</p>
                     </div>
                     <div class="stat">
                         <i class="fas fa-users"></i>
@@ -62,19 +78,23 @@
             </div>
         </section>
 
+        <!-- Services section highlighting our approach -->
         <section class="services">
             <h2>Our Approach</h2>
             <div class="services-grid">
+                <!-- Virtual collaboration service card -->
                 <div class="service-card">
                     <i class="fas fa-video"></i>
                     <h3>Virtual Collaboration</h3>
                     <p>Expert facilitation of remote meetings and workshops</p>
                 </div>
+                <!-- Digital tools service card -->
                 <div class="service-card">
                     <i class="fas fa-tools"></i>
                     <h3>Digital Tools</h3>
                     <p>Implementation and optimization of online project management tools</p>
                 </div>
+                <!-- Remote monitoring service card -->
                 <div class="service-card">
                     <i class="fas fa-chart-line"></i>
                     <h3>Remote Monitoring</h3>
@@ -83,9 +103,11 @@
             </div>
         </section>
 
+        <!-- Contact section with form -->
         <section id="contact" class="contact">
             <h2>Contact Us</h2>
             <div class="contact-container">
+                <!-- Contact form with validation -->
                 <form id="contactForm" class="contact-form">
                     <input type="text" name="name" placeholder="Your Name" required>
                     <input type="email" name="email" placeholder="Your Email" required>
@@ -96,12 +118,15 @@
         </section>
     </main>
 
+    <!-- Footer section -->
     <footer>
         <div class="footer-content">
+            <!-- Company information -->
             <div class="footer-section">
                 <h3>AskThePM</h3>
                 <p>Your project, our expertise.</p>
             </div>
+            <!-- Quick navigation links -->
             <div class="footer-section">
                 <h3>Quick Links</h3>
                 <ul>
@@ -111,6 +136,7 @@
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
+            <!-- Social media links -->
             <div class="footer-section">
                 <h3>Connect With Us</h3>
                 <div class="social-links">
@@ -120,6 +146,7 @@
                 </div>
             </div>
         </div>
+        <!-- Copyright information -->
         <div class="footer-bottom">
             <p>&copy; 2025 AskThePM. All rights reserved.</p>
         </div>
